@@ -1,6 +1,7 @@
 {
   "files.associations": {
-    "conio.h": "c"
+    "conio.h": "c",
+    "HANOI.C": "cpp"
   },
   "C_Cpp.errorSquiggles": "Disabled"
 }
