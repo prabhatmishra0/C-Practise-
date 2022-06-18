@@ -16,6 +16,7 @@ int queueinsert(struct queue* b , int val){
     } else {
         b->rear++;
         b->arr[b->rear] = val;
+        printf("value inserted !! \n");
     }
 
     if(b->front == -1){
@@ -32,6 +33,12 @@ int queuedelete(struct queue* b){
     }
     else {
         a = b->arr[b->front];
+
+        for(int i = 0; i < b->rear; i++){
+            b->arr[i] = b->arr[i+1];
+        }
+        b->rear--;
+        b->front--;
     }
 
     if(b->front == b->rear) {
@@ -60,22 +67,23 @@ int main(){
     queueinsert(&b , 28);
 
 
-    int v = queuedelete(&b);
-    printf(" %d \n" , v);
+    // int v = queuedelete(&b);
+    // printf(" %d \n" , v);
 
-    queueinsert(&b , 29);
-
+    // queueinsert(&b , 29);
 
     // int r = queuedelete(&b);
-    // printf(" %d" , r);
+    // printf(" %d \n" , r);
 
     // int e = queuedelete(&b);
-    // printf(" %d" , e);
+    // printf(" %d \n" , e);
 
     // int w = queuedelete(&b);
-    // printf(" %d" , w);
+    // printf(" %d \n" , w);
 
-
+    // int we = queuedelete(&b);
+    // printf(" %d \n" , we);
+ 
 
     return 0;
 }
