@@ -6,7 +6,7 @@ void main(){
 
     for(int i = 0; i<=8; i++){
         for(int j = i+1; j<=8; j++){
-            if(arr[i] == arr[j]){
+            if(arr[i] < arr[j]){
                 printf("%d \n ", arr[i]);
             }
         }

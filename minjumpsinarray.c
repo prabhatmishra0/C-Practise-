@@ -11,7 +11,7 @@ void main(){
 
         if(arr[i] == 0){
             break;
-            return -1;
+            return 0;
         }
 
         i += arr[i];
